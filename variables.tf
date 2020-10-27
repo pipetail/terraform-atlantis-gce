@@ -1,15 +1,18 @@
 variable "project" {
   type = string
+  description = "GCP project id"
 }
 
 variable "region" {
   type    = string
   default = "us-central1"
+  description = "GCP region"
 }
 
 variable "image" {
   type    = string
   default = "runatlantis/atlantis:v0.15.1"
+  description = "docker image ref to be used"
 }
 
 variable "instance_name" {
