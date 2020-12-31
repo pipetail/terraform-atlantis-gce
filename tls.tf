@@ -50,7 +50,7 @@ resource "tls_cert_request" "request" {
 
   ip_addresses = [
     "127.0.0.1",
-    google_compute_global_address.static.address,
+    google_compute_address.static.address,
   ]
 
   subject {
