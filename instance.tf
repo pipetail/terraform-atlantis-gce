@@ -55,7 +55,7 @@ resource "google_compute_firewall" "ingress-to-instance" {
   target_tags   = local.target_tags
 }
 
-resource "google_compute_address" "static" {
+resource "google_global_compute_address" "static" {
   name = "atlantis-ipv4"
 }
 
