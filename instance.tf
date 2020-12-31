@@ -17,7 +17,7 @@ resource "google_compute_instance" "atlantis" {
   network_interface {
     network = "default"
     access_config {
-      nat_ip = google_compute_address.static.address
+      nat_ip = google_compute_global_address.static.address
     }
   }
 
@@ -55,7 +55,7 @@ resource "google_compute_firewall" "ingress-to-instance" {
   target_tags   = local.target_tags
 }
 
-resource "google_global_compute_address" "static" {
+resource "google_compute_global_address" "static" {
   name = "atlantis-ipv4"
 }
 

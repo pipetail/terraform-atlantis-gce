@@ -5,7 +5,7 @@ module "gce-container" {
     image = "gcr.io/${var.project}/${var.image}"
     args = [
       "server",
-      "--atlantis-url=https://${google_compute_address.static.address}",
+      "--atlantis-url=https://${google_compute_global_address.static.address}",
       "--gh-user=${var.github_user}",
       "--gh-token=${var.github_token}",
       "--gh-webhook-secret=${var.webhook_secret}",
