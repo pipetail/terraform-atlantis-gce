@@ -1,22 +1,27 @@
 variable "project" {
-  type = string
+  type        = string
   description = "GCP project id"
 }
 
 variable "region" {
-  type    = string
-  default = "us-central1"
+  type        = string
+  default     = "us-central1"
   description = "GCP region"
 }
 
 variable "image" {
-  type    = string
-  default = "runatlantis/atlantis:v0.15.1"
+  type        = string
+  default     = "runatlantis/atlantis:v0.15.1"
   description = "docker image ref to be used"
 }
 
 variable "instance_name" {
   description = "The desired name to assign to the deployed instance"
+}
+
+variable "instance_type" {
+  description = "The desired machine_type of deployed instance"
+  default     = "e2-micro"
 }
 
 variable "zone" {

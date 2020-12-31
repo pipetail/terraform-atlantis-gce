@@ -3,7 +3,7 @@
 resource "google_compute_instance" "atlantis" {
   project      = var.project
   name         = local.instance_name
-  machine_type = "e2-micro"
+  machine_type = var.instance_type
   zone         = var.zone
 
   allow_stopping_for_update = true
