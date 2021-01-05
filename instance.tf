@@ -11,6 +11,7 @@ resource "google_compute_instance" "atlantis" {
   boot_disk {
     initialize_params {
       image = module.gce-container.source_image
+      size  = var.boot_disk_size
     }
   }
 

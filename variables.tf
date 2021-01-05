@@ -24,6 +24,11 @@ variable "instance_type" {
   default     = "e2-micro"
 }
 
+variable "boot_disk_size" {
+  description = "GCE instance boot disk size"
+  default     = 100
+}
+
 variable "zone" {
   description = "The GCP zone to deploy instances into"
   type        = string
